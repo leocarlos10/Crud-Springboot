@@ -1,0 +1,109 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    background-color: #4e73df;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contenedor-base{
+    width: 100vh;
+    height: 100vh;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenedor-colum-base{
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem;
+}
+
+.card{
+    padding: 2.5rem 1.5rem;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #e3e6f0;
+    border-radius: 1rem;
+}
+
+.card-body{
+    height: 100%;
+}
+
+.contenedor-info-usuario{
+    width: 100%;
+    height: 100%;
+}
+
+.titulo{
+    text-align: center;
+    color: #3a3b45;
+    margin-bottom: 1.5rem;
+}
+
+.formulario{
+    height: 70%;
+}
+
+.form-group{
+    margin-bottom: 1rem;
+}
+
+.form-group > input{
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: .8rem;
+    border-radius: 10rem;
+    padding: 1.5rem 1rem;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #d1d3e2;
+    outline: none;
+}
+
+.btn{
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+    font-size: .8rem;
+    border-radius: 10rem;
+    padding: 1.5rem 1rem;
+    background-color: #4e73df;
+    text-decoration: none;
+    border: 1px solid #4e73df;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    text-align: center;
+}
+
+.btn:hover{
+    box-shadow: 1px 1px 6px #3a3b45;
+}
+
+.text-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.btn-crear-cuenta{
+    text-decoration: none;
+    color: #3a3b45;
+}
+
+.btn-crear-cuenta:hover{
+    color: #4e73df;
+}

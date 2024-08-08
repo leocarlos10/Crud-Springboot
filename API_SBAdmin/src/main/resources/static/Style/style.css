@@ -1,0 +1,494 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    background-color: #4e73df;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-pri{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f9fc
+}
+
+.side-bar{
+    display: flex;
+    flex-direction: column;
+    width: 14rem;
+    height: 100%;
+    background-color:#4e73df;;
+}
+
+
+ .contenido-pri{
+    width: 100%;
+    height: 100%;
+    background-color:#f8f9fc;
+} 
+
+.container-logo{
+    display: flex;
+    padding: 10px;
+    gap: 5px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: flex-start;
+    width: 100%; 
+}
+
+.text > span > a{
+    text-decoration: none;
+    color: white;
+}
+
+.lista{
+    height: 100%;
+
+}
+
+.lista > a{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0px;
+    text-decoration: none;
+    color: white;
+}
+
+.lista > a{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+
+.icono{
+    padding-right: 20px;
+    color: white;
+}
+
+.btn_eliminar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: #e74a3b;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+}
+
+.btn_editar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: #4e73df;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+}
+
+
+.btn_editar:hover,
+.btn_eliminar:hover{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* este estilo es para la casilla de las acciones
+para que se ubiquen uno al lado del otro */
+
+.acciones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.icon{
+    width: 1rem;
+}
+
+.separador{
+    width: 10rem;
+    height: 2px;
+    background-color: rgba(255, 255, 255, .15);
+    margin-left: 35px;
+}
+
+.user{
+    width: 2rem;
+    height: 2rem;
+}
+
+.contenedor-nav-bar{
+    height: 5.5rem;
+    margin: 0px 2px;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0.5px 1px 20px ;
+
+}
+
+.nav-items{
+    display: flex;
+    gap: 20px;
+    height: 4.5rem;
+    padding: 5px;
+   
+}
+
+.form-nav-item{
+    width: 50%;
+    height: 3.5rem;
+    padding: 5px;
+    
+}
+
+.input-group{
+    display: flex;
+    flex-direction: row;
+    height: 2.5rem;
+    padding: 3px;
+   
+}
+
+#input-busqueda{
+    border-radius: 5px;
+    width: 20rem;
+    outline: none;
+    border-width: 1px;
+    border-color: #fff;
+}
+
+#btn-buscar{
+    outline: none;
+    width: 2.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #4e73df;
+}
+
+.container-user{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+    width: 45%;
+    padding: 6px;
+}
+
+.container-user > span{
+    line-height: 35px;
+    color: #858796;
+}
+
+.img-user{
+    position: relative;
+}
+
+.contenido-main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    height: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #f8f9fc;
+}
+
+
+.container-user-texto{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    padding: 20px 30px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.imagen-usuario{
+    width: 40%;
+    height: 75%;
+    margin-top: 30px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 30px;
+    background-image: url(/img/usuario.jpeg) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.texto{
+    width: 50%;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 40px;
+    background-color: white;
+}
+
+.texto > p{
+    text-align: justify;
+    
+}
+
+.contenedor1{
+    width: 100%;
+    height: 100%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.contenedor1 > h1{
+    color: #5a5c69;
+}
+
+.contenedor-tabla{
+    width: 100%;
+    height: 60%;
+    padding: 7px 0px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 0.2px solid #858796;
+}
+
+.info{
+    padding: 16px 20px;
+    background-color: #fff;
+    height: 15%;
+    border-bottom: 0.2px solid #858796;
+}
+
+.info > h5 {
+    width: 100%;
+    color: #4e73df;
+}
+
+.contenedor-tabla-usuarios{
+    width: 100%;
+    height: 100%;
+    padding: 16px 17px;
+}
+
+.tabla-user{
+    width: 100%;
+    height: 40%;
+    padding: 5px;
+    border-radius: 5px;
+    color: #858796;
+    background-color: #fff;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+ }
+
+ table, th, td {
+    border: 1px solid #858796 ;
+}
+
+.tabla-body > tr > td {
+    text-align: center;
+}
+
+
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3.5rem;
+    padding: .5rem 0;
+    min-width: 10rem;
+    font-size: .85rem;
+    background-color: #fff;
+    border: 1px solid #e3e6f0;
+    border-radius: .35rem;
+}
+
+/* Este estilo es el que mantiene el menu oculto
+    para mostrarlo se utiliza javascript para quitar
+    el id y automaticamente se muestra el menu.
+*/
+.dropdown-menu-toggle{
+    z-index: -1;
+}
+
+.dropdown-item{
+    width: 100%;
+    padding: 0.6rem;
+    margin-left: 5px;
+    text-decoration: none;
+    color: #858796;
+}
+
+.dropdown-divider {
+    height: 0;
+    margin: .5rem 0;
+    overflow: hidden;
+    border-top: 1px solid #eaecf4;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    margin: 8% auto;
+    padding: 30px;
+    width: 40%;
+    height: 55%;
+    border: 1px solid #888;
+    border-radius: 1.5rem;
+    background-color: white;
+}
+
+#edit-form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#edit-form > input{
+    padding: 10px;
+    height: 2rem;
+    border-radius: 1rem;
+    border: #858796 solid 1px;
+    outline: none;
+}
+
+#edit-form > label{
+    margin-left: 3px;
+}
+
+#btn_guardar_cambios{
+    margin-top: 1rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #4e73df;
+    color: #fff;
+    outline: none;
+}
+
+#btn_guardar_cambios:hover{
+    box-shadow: 1px 1px 6px #3a3b45;
+    cursor: pointer;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover, .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#btn_mostrar{
+    position: relative;
+    left: 89%;
+    bottom: 30%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+
+@media screen and (max-width: 1000px) {
+    
+    body{
+        height: 100%;
+    }
+
+    .container-pri{
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container-usuario-imagen{
+        height: 600px;
+        width: 600px;
+    }
+
+    .container-texto{
+         width: 500px;
+         height: 800px;
+        font-size: 13px;
+    }
+
+    .contenido-main{
+        position: relative;
+        height: 100%;
+    }
+
+}
+
+@media screen and (max-width: 2000px) {
+   
+    .texto{
+        height: 450px;
+    }
+
+}
+
+@media screen and (max-width: 999px), (max-width: 900px), (max-width: 855px) {
+
+    html{
+        height: 100%;
+    }
+
+    .imagen-usuario{
+        margin-top: 5px;
+    }
+
+    .texto{
+        margin-top: 5px;
+        height: 30rem;
+    }
+}

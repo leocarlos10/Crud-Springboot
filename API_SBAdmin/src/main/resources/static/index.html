@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Style/style.css">
+    <link rel="stylesheet" href="/Style/ingresar_user.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>SB Admin</title>
+</head>
+<body>
+
+    <div class="container-pri">
+        <div class="side-bar">
+                <!-- agregar el logo -->
+                 <div class="container-logo">
+                    <a href="index.html">
+                        <span class="material-symbols-outlined icono ">
+                        add_reaction
+                        </span>
+                    </a>
+                        <div class="text">
+                            <span class="descripcion-logo"><a href="index.html" >SB admin</a></span>
+                        </div>
+                 </div>
+                    <div class="lista">
+                        <a href="#"> <i class='bx bxs-doughnut-chart'></i> <span>Dashboard</span></a>
+                        <div class="separador"></div>
+                        <a href="#"><i class='bx bx-cog'></i><span>Componentes</span></a>
+                        <div class="separador"></div>
+                        <a href="#" id="Ingresar-user"> <span class="material-symbols-outlined icon">
+                            person
+                            </span>
+                            <span>Ingresar Cuenta</span>
+                        </a>
+                        <div class="separador"></div>
+                        <a href="#" id="tabla-usuarios">
+                            <span class="material-symbols-outlined icon">
+                                table
+                            </span> <span> Tabla de usuarios</span></a>
+                    </div>
+        </div>
+        <div class="contenido-pri">
+            <div class="contenedor-nav-bar">
+                <nav class="nav-items">
+                    <form class="form-nav-item" >
+                        <div class="input-group">
+                            <input id="input-busqueda" type="text" placeholder="Buscar">
+                            <button id="btn-buscar">
+                                <span class="material-symbols-outlined icono">
+                                search
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="container-user">
+                        <span id="email_usuario"></span>
+                    <a class="img-user" id="img-user" href="#">
+                        <img class="user" src="/img/user.svg" alt="logo">
+                        <div class="dropdown-menu dropdown-menu-toggle" id="dropdown-menu" >
+                            <a class="dropdown-item" href="/iniciarsesion.html" >
+                                <i class='bx bxs-user'></i>
+                                iniciar sesion
+                            </a>
+                            <a class="dropdown-item" href="/Registrarse.html" >
+                                <i class='bx bxs-plus-square'></i>
+                                registrarse
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class='bx bx-menu'></i>
+                                Actividad
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal" id="cerrar-sesion">
+                                <i class='bx bxs-exit'></i>
+                                cerrar sesion
+                            </a>
+                        </div>
+                    </i></a>
+                    </div>
+                </nav>
+            </div>
+            <div class="contenido-main" id="contenido-main">
+                <div class="container-user-texto">
+                        <div class="imagen-usuario">
+                        </div>
+                        <div class="texto">
+                            <p>Bienvenido a SB admin
+                                Nuestra plataforma se dedica exclusivamente a la gestión eficiente de Cuentas. 
+                                Con una interfaz simple y amigable, permitimos a los usuarios registrarse fácilmente y visualizar 
+                                sus datos en una tabla organizada. Nuestro sistema garantiza la seguridad y privacidad de la información, 
+                                ofreciendo una solución confiable para el almacenamiento y administración de tus Cuentas. 
+                                ¡Únete a nosotros y experimenta una gestión de Cuentas sin complicaciones!</p>
+                        </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Editar Usuario</h2>
+            <form id="edit-form">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" autofocus>
+                <label for="cuenta">Cuenta</label>
+                <input type="email" id="cuenta" name="cuenta">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" name="contraseña">
+                <button id="btn_guardar_cambios">Guardar Cambios</button>
+            </form>
+            <button id="btn_mostrar"><span class="material-symbols-outlined ">visibility</span></button>
+        </div>
+    </div>
+    <script src="/js/index.js"></script>
+</body>
+</html>
