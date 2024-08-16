@@ -31,14 +31,14 @@ const iniciarsesion = async ()=>{
         });
 
         // Luego capturamos la respuesta y verificamos que el usuario se haya logueado
-        const respuesta = await request.text();
+        const response = await request.json();
 
-        if(respuesta != "fail"){
-            localStorage.token = respuesta;
+        if(request.status == 200){
+            localStorage.token = response.respuesta;
             localStorage.email = datos.email; 
             window.location.href = 'index.html';
-        }else{
-            alert('las credenciales son incorrectas, por favor intente nuevamente');
+        }else if(request.status == 401){
+            alert(response.respuesta);
         }
     }
 }
