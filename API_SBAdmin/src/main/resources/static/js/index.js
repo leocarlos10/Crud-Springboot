@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                             </thead>
                             <tbody class="tabla-body" id="tabla-body">
                                 <tr>
-                                    <td colspan = "5"> No hay Informacion disponible</td>
+                                    <td colspan = "5" class="info2"> No hay Informacion disponible</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 </div>
             </div>`;
 
-        // Realizamos la solicitud al backend para traer todas las cuentas de la DB
+        // Realizamos la solicitud al backend para traer todas las cuentas de la base de datos
         const CargarCuentas = async ()=>{
 
             const respuesta = await fetch('api/cuentas/'+localStorage.email,{
@@ -52,15 +52,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 headers: getHeaders(),
             });
 
-             // manejamos la respuesta para mostrar las cuentas en la tabla
-             const cuentas = await respuesta.json();
+            // manejamos la respuesta para mostrar las cuentas en la tabla
+            const cuentas = await respuesta.json();
+            let info_estatus =  document.querySelector('.info2');
 
             // verificamos el codigo de estado de la respuesta
-            if(respuesta.status === 401){
-                alert('Por favor inicie sesion para cargar esta informacion !');
-                location.href = 'iniciarsesion.html';
+            if(respuesta.status == 404){
+                info_estatus.innerHTML = 'El recurso no ha sido encontrado';
+                // redirecionamos al usuario ala pagina de inicio de sesion despues de 4 segundos
+                setTimeout(()=>{ location.href = 'iniciarsesion.html'},4000);
+
             }else if(!respuesta.ok){
-                console.log(respuesta.ok);
+                // en caso de recivir false quiere decir que el usuario no ha iniciado sesion
+               info_estatus.innerHTML = 'Por favor inicie sesion para cargar esta informacion!';
             } else{
 
                 console.log(cuentas)

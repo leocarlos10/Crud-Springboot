@@ -40,7 +40,7 @@ public class CuentaController {
     }
 
     @RequestMapping(value = "api/cuentas/{email}", method = RequestMethod.GET)
-    public ResponseEntity<List<Cuenta>> getCuentas( @PathVariable String email ,@RequestHeader(value = "Authorization") String token){
+    public ResponseEntity<?> getCuentas( @PathVariable String email ,@RequestHeader(value = "Authorization") String token){
         // antes de devolver los usuarios verificamos que el usuario este logueado
         if(jwt.validarToken(token)){
             // obtenemos los datos de la DB
@@ -48,14 +48,18 @@ public class CuentaController {
             List<Cuenta> cuentas = dao.get(daouser.obtener(email));
             // enviamos la respuesta ok con la lista de cuentas
             return ResponseEntity.ok(cuentas);
-        }
-        /*
+        }else {
+            /*
         en caso de que el usuario no este logueado
         envia HttpStatus.UNAUTHORIZED: Es el código de estado HTTP 401,
          que indica que la solicitud no ha sido aplicada porque carece de
          credenciales de autenticación válidas.
+         el hashmap lo utilizamos para deovlver una respuesta en formto json
         */
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
+            Map<String,String> respuesta = new HashMap<>();
+            respuesta.put("respuesta","Por favor Inicie sesion para mostrar esta información!");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(respuesta);
+        }
     }
 
     @RequestMapping(value = "api/cuentas/{id}", method = RequestMethod.DELETE)
